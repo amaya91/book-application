@@ -1,0 +1,12 @@
+
+<p-panel >
+    <p-header class="ui-panel-title">Book Details</p-header>
+    <div>Title:    {{book.title}}</div>  
+    <div>Author:    {{book.author}}</div>  
+    <div>Genre:    {{book.genre}}</div>  
+    <div>Publisher:    {{book.publisher}}</div>
+
+    <button style="margin-right: .25em; width: 5em" pButton type="button" (click)="onEditClick($event)">Edit</button>
+    <button style="margin-right: .25em; width: 5em" pButton type="button"  (click)="onCancelClick($event)">Cancel</button>
+</p-panel>
+

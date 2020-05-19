@@ -1,0 +1,28 @@
+<p-panel >
+
+  <p-header class="ui-panel-title">{{viewMode}} Book</p-header>
+  
+  <form [formGroup]="homeForm">
+    <div style="padding-bottom: 5px">
+      {{book.title}}
+      <input type="text" pInputText formControlName="title" placeholder="Title" >
+    </div>
+    <div style="padding-bottom: 5px">
+      {{book.author}}
+      <input type="text" pInputText formControlName="author" placeholder="Author">
+    </div>
+    <div style="padding-bottom: 5px">
+      {{book.genre}}
+      <input type="text" pInputText formControlName="genre" placeholder="Genre">
+    </div>
+    <div style="padding-bottom: 5px">
+      {{book.publisher}}
+      <input type="text" pInputText formControlName="publisher" placeholder="Publisher">
+    </div>
+  </form>
+
+  <button style="margin-right: .25em; width: 5em" pButton  (click)="onSaveClick()">Save</button>  
+  <button style="margin-right: .25em; width: 5em" pButton  (click)="onCancelClick()">Cancel</button>
+
+</p-panel>
+

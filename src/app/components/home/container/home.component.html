@@ -1,0 +1,13 @@
+<p-panel>
+    <p-header class="ui-panel-title">Books</p-header>
+    <app-home-list [books]="books" (selectBook)="selectBook($event)"></app-home-list>
+    <p-footer>  
+        <button icon="pi pi-plus" label="Add" class="ui-button-info" style="margin-right: .25em;" pButton type="button" (click)="addBook()"></button>
+    </p-footer>
+</p-panel>  
+<app-home-details [book]="selectedBook" *ngIf="detailsEnabled"  (viewMode)="viewModeChanged($event)"></app-home-details>
+<app-home-form [book]="selectedBook" [viewMode]="viewMode" *ngIf="formEnabled" (viewModeChange)="viewModeChanged($event)" (saveBook)="saveBook($event)"></app-home-form>
+
+
+
+
